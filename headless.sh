@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set Github Release version name from names of file
-version=$(ls *.zip | tr '\n' ' ')
+version=$(ls *.zip | tr -d '\n')
 
 # Check if the tag already exists
 if git rev-parse "$version" &> /dev/null; then
